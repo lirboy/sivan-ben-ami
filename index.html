@@ -448,6 +448,62 @@
 
         .contact-actions svg { width: 20px; height: 20px; }
 
+        /* ---------- וואטסאפ ---------- */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #1da851);
+            color: #06301a;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+        }
+
+        /* בועה צפה */
+        .wa-float {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #1da851);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 14px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        .wa-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+
+        /* הילה פועמת */
+        .wa-float::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.55);
+            animation: wa-pulse 2.4s ease-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes wa-pulse {
+            0%   { transform: scale(1);   opacity: 0.7; }
+            70%  { transform: scale(1.6); opacity: 0; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
         /* ---------- פוטר ---------- */
         footer {
             border-top: 1px solid var(--line);
@@ -473,6 +529,8 @@
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .reveal { opacity: 1; transform: none; transition: none; }
+            .wa-float::before { animation: none; }
+            .wa-float:hover { transform: none; }
         }
 
         /* ---------- רספונסיביות ---------- */
@@ -500,6 +558,15 @@
             .why-content .section-head { text-align: center; }
 
             section { padding: 72px 0; }
+
+            .wa-float {
+                width: 52px;
+                height: 52px;
+                bottom: 18px;
+                left: 18px;
+            }
+
+            .wa-float svg { width: 27px; height: 27px; }
         }
     </style>
 </head>
@@ -652,6 +719,10 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <span class="value">054-8000288</span>
                     </a>
+                    <a href="https://wa.me/972548000288?text=%D7%94%D7%99%D7%99%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%AA%D7%94%D7%9C%D7%99%D7%9B%D7%99%20%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.25-4.35c0-4.53 3.7-8.22 8.24-8.22 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22z"/></svg>
+                        <span>וואטסאפ</span>
+                    </a>
                     <a href="mailto:sivanoren5@gmail.com" class="btn btn-outline">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
                         <span class="value">sivanoren5@gmail.com</span>
@@ -660,6 +731,13 @@
             </div>
         </div>
     </section>
+
+    <!-- בועת וואטסאפ צפה -->
+    <a class="wa-float"
+       href="https://wa.me/972548000288?text=%D7%94%D7%99%D7%99%20%D7%A1%D7%99%D7%95%D7%9F%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%AA%D7%94%D7%9C%D7%99%D7%9B%D7%99%20%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA."
+       target="_blank" rel="noopener" aria-label="שליחת הודעת וואטסאפ לסיון בן עמי">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.25-4.35c0-4.53 3.7-8.22 8.24-8.22 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22z"/></svg>
+    </a>
 
     <!-- פוטר -->
     <footer>
